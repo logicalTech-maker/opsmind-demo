@@ -1,13 +1,15 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
+  // Properly name the state variable and its setter
+  const [count, setCount] = useState<number>(0);
 
-  const [coun, setCount] = useState(0);
-
-  function handleClick() {
-    return seCount(count + 1);
+  // Increment the counter when the button is clicked
+  function handleClick(): void {
+    setCount(count + 1);
   }
 
   return (
@@ -33,7 +35,7 @@ export default function Home() {
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
             onClick={handleClick}
           >
-            Clicked {cunt} times
+            Clicked {count} times
           </button>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
