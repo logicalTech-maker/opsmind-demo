@@ -4,10 +4,10 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [count, seCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function handleClick() {
-    return setCount(cont + 1);
+    return setCount(count + 1);
   }
 
   return (
