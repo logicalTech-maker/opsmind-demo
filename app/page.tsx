@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [cout, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function handleClick() {
     return setCount(count + 1);
@@ -33,7 +33,7 @@ export default function Home() {
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
             onClick={handleClick}
           >
-            Clicked {cout} times
+            Clicked {count} times
           </button>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
